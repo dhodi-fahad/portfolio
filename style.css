@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* General styles */
+body {
+
+    font-family: 'Space Mono', monospace;
+    background-color: #fff/* Background color */;
+    color: #000 /* Text color */;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure full-height layout */
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px/* Heading size */;
+    /* margin-bottom: Heading margin; */
+}
+
+.slogan {
+    font-size: 16px/* Slogan size */;
+    /* margin-bottom: Slogan margin; */
+    margin-top: 30px;
+    width: 200px;
+}
+
+.join-button {
+    /* background-color: Button background color; */
+    /* color: Button text color; */
+    border: none;
+    /* padding: Button padding; */
+    /* border-radius: Button border radius; */
+    /* cursor: pointer; */
+}
+
+main {
+    /* background-color: Main content background color;
+    /* padding: Main content padding; */
+    /* border-radius: /* Main content border radius ; */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 10px/* Label margin */;
+}
+
+input {
+    padding: 10px/* Input padding */;
+    /* border: Input border; */
+    /* border-radius: Input border radius; */
+    margin-bottom:10px /* Input margin */;
+    width: 250px;
+    background: inherit;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    color: #fff;
+    font-family: inherit;
+}
+
+button[type="submit"] {
+    background-color:#000 /* Submit button background color */;
+    color: #fff/* Submit button text color */;
+    border: none;
+    /* padding: Submit button padding; */
+    /* border-radius: Submit button border radius; */
+    cursor: pointer;
+    padding: 10px;
+    font-family: inherit;
+}
+
+footer{
+    /* margin-top: auto; */
+    margin-bottom: 50px;
+}
+footer a{
+    text-decoration: none;
+    color: #fff;
+    
+}
