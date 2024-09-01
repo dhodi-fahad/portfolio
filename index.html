@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="KNNE Logo.svg">
+    <title>Dhodi Fahad Kinene Website</title>
+    <meta name="description" content="Learning about Engineering and Entreprenuership">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Dhodi Fahad Kinene</h>
+        <p class="slogan">Engineering | Entreprenuership</p>
+    </header>
+
+<!--     <main> -->
+<!--         <form  id="emailForm" method="post" > -->
+            <!-- <span class="join-button">Join →</span> -->
+<!--             <input type="text" id="email-phone" name="email-phone" placeholder="Enter A Phone Number Or Email" autocomplete="off"> -->
+<!--             <button type="submit">Join →</button> -->
+<!--         </form> -->
+<!--     </main> -->
+
+    <footer>
+        
+            <a href="https://www.instagram.com/dhodifahad">
+                <i class="bi bi-instagram"></i>
+            </a>
+        
+        
+            <a href="https://www.x.com/dhodifahad">
+                <i class="bi bi-twitter-x"> </i>
+            </a>
+       
+        
+            <a href="https://www.tiktok.com/dhodifahad">
+                <i class="bi bi-tiktok"></i>
+            </a>
+        
+        
+            <a href="https://www.threads.net/dhodifahad">
+                <i class="bi bi-threads"></i>
+            </a>
+        
+    </footer>
+
+    <script>
+
+        function sendEmailToSheet(event) {
+                    event.preventDefault();
+
+                    const email = document.getElementById("email-phone").value;
+                    const sheetId = "YOUR_GOOGLE_SHEET_ID"; // Replace with your Google Sheet ID
+
+                    // Encode the email value before appending it to the URL
+                    const encodedEmail = encodeURIComponent(email);
+
+                    const url = `https://script.google.com/macros/s/AKfycbz.../exec?id=${sheetId}&data=${encodedEmail}`;
+
+                    fetch(url, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({ email })
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            console.log("Email sent to Google Sheet successfully!");
+                            document.getElementById("email-phone").value = "";
+                            alert("Thanks for your submission!");
+                        } else {
+                            console.error("Failed to send email to Google Sheet:", response.statusText);
+                            // Handle the error, e.g., display an error message to the user
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+                        // Handle network errors or other issues
+                    });
+                }
+
+                document.getElementById("emailForm").addEventListener("submit", sendEmailToSheet);
+
+    </script>
+</body>
+</html>
